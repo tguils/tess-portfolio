@@ -9,13 +9,15 @@ export default function FeaturedProjects() {
       </h2>
 
       <div className="mt-8 grid gap-6 md:grid-cols-2">
-        {projects.map((project) => (
+        {projects
+  .filter((project) => project.featured)
+  .map((project) => (
           <ProjectCard
             key={project.id}
             title={project.title}
             description={project.description}
             technologies={project.technologies}
-            url={project.url}
+            slug={project.slug}
           />
         ))}
       </div>
