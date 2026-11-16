@@ -8,4 +8,7 @@ export type Project = {
   technologies: string[];
   url: string;
   featured: boolean;
+  image?: string;
+  role?: string;
+  category?: string;
 };

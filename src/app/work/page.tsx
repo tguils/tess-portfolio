@@ -16,13 +16,13 @@ export default function WorkPage() {
 
       <div className="mt-12 grid gap-6 md:grid-cols-2">
         {projects.map((project) => (
-          <ProjectCard
-            key={project.id}
-            title={project.title}
-            description={project.description}
-            technologies={project.technologies}
-            slug={project.slug}
-          />
+         <ProjectCard
+  key={project.id}
+  title={project.title}
+  slug={project.slug}
+  image={project.image}
+  category={project.category}
+/>
         ))}
       </div>
     </main>
