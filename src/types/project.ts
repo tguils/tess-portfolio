@@ -11,4 +11,6 @@ export type Project = {
   image?: string;
   role?: string;
   category?: string;
+  overview?: string;
+gallery?: string[];
 };

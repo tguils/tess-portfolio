@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 
 export default function Header() {
@@ -20,11 +21,7 @@ export default function Header() {
             Work
           </Link>
 
-          <Link href="/about" className="text-gray-700 hover:text-purple-600">
-            About
-          </Link>
-
-          <Link href="/contact" className="text-gray-700 hover:text-purple-600">
+          <Link href="/#contact" className="text-gray-700 hover:text-purple-600">
             Contact
           </Link>
         </div>
