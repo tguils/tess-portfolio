@@ -3,36 +3,38 @@ const skills = [
   {
     title: "Front-End Development",
     description:
-      "Building responsive, accessible interfaces and translating designs into functional websites.",
+      "Building responsive, accessible websites and interfaces using modern front-end technologies.",
     technologies: [
       "HTML",
       "CSS",
       "JavaScript",
+      "TypeScript",
       "React",
       "Next.js",
-      "TypeScript",
     ],
   },
   {
     title: "WordPress & Ecommerce",
     description:
-      "Developing and maintaining WordPress websites, custom functionality, and online stores.",
+      "Developing custom WordPress websites, extending functionality, and building ecommerce experiences.",
     technologies: [
       "WordPress",
-      "Divi",
-      "WooCommerce",
       "PHP",
+      "WooCommerce",
+      "Divi",
+      "Elementor",
     ],
   },
   {
-    title: "Custom Functionality & Integrations",
+    title: "Custom Development & Integrations",
     description:
-      "Creating membership experiences, integrating payment systems, and connecting external services.",
+      "Extending website functionality through custom code, APIs, membership systems, and third-party integrations.",
     technologies: [
       "REST APIs",
       "Stripe",
-      "Custom Fields",
-      "Integrations",
+      "WordPress Hooks",
+      "Custom Post Types",
+      "Third-Party APIs",
     ],
   },
 ];
