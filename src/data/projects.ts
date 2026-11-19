@@ -119,15 +119,75 @@ technicalApproach:
     "Built the website in WordPress using Divi to structure and implement the provided Figma designs. Used CSS to refine visual details and responsive layouts, focusing on consistency between the original designs and the finished website.",
 },
 
+{
+  id: 3,
+  slug: "beantown-pals",
+  title: "Beantown Pals",
+  description:
+    "An interactive membership website featuring daily games, user accounts, and a points-based engagement system.",
+  technologies: [
+    "WordPress",
+    "Divi",
+    "CSS",
+    "Ultimate Member",
+    "JavaScript",
+  ],
+  url: "https://beantownpals.com/",
+  featured: true,
+  image: "/projects/beantown-pals.webp",
+  role: "Website Design & Development",
+  category: "Membership & Interactive Websites",
+  overview:
+    "Designed and developed an interactive WordPress website for Beantown Pals, combining a playful visual experience with member accounts, daily games, and a points-based engagement system.",
+gallery: [
+  "/projects/beantown-pals.webp",
+  "/projects/beantown-pals-join.webp",
+  "/projects/beantown-pals-profile.webp",
+  
+],
+  highlights: [
+    "Custom website design and development",
+    "Membership platform integration",
+    "Interactive games and activities",
+    "User scoring and engagement features",
+  ],
+
+  features: [
+    {
+      title: "Custom Website Design & Development",
+      description:
+        "Designed and developed the website using WordPress, Divi, and custom CSS to create a colorful, engaging, and responsive experience.",
+    },
+    {
+      title: "Membership Platform",
+      description:
+        "Integrated Ultimate Member to support user registration, login, and member accounts.",
+    },
+    {
+      title: "Daily Games & Activities",
+      description:
+        "Implemented daily games and interactive activities to encourage members to return and participate.",
+    },
+    {
+      title: "Points-Based Engagement",
+      description:
+        "Implemented a scoring system that allows members to earn points through participation in games and activities.",
+    },
+  ],
+
+  technicalApproach:
+    "Built the website using WordPress and Divi, with custom CSS for visual styling and responsive layouts. Integrated Ultimate Member for account management and implemented interactive game and points-based functionality to support ongoing member engagement.",
+},
+
   {
-    id: 3,
+    id: 4,
     slug: "ogre-chocolates",
     title: "Ogre Chocolates",
     description:
       "A custom-branded ecommerce website developed from Figma designs with WooCommerce shopping functionality.",
     technologies: ["WordPress", "WooCommerce", "CSS", "JavaScript"],
     url: "https://ogrechocolates.com",
-    featured: true,
+    featured: false,
     image: "/projects/ogre-chocolates.webp",
     role: "Front-End & Ecommerce Development",
     category: "Ecommerce",
@@ -135,7 +195,7 @@ technicalApproach:
    // ADDITIONAL PROJECTS
 
   {
-    id: 4,
+    id: 5,
     slug: "lumber-barn",
     title: "Lumber Barn",
     description: "Website development for Lumber Barn.",
@@ -146,7 +206,7 @@ technicalApproach:
     category: "Website Development",
   },
   {
-    id: 5,
+    id: 6,
     slug: "blind-citizens",
     title: "American Blind Citizens",
     description: "Website development for a nonprofit organization.",
@@ -157,7 +217,7 @@ technicalApproach:
     category: "Nonprofit Website",
   },
   {
-    id: 6,
+    id: 7,
     slug: "fieldstone-land-consultants",
     title: "Fieldstone Land Consultants",
     description: "Website development for Fieldstone Land Consultants.",
@@ -168,7 +228,7 @@ technicalApproach:
     category: "Business Website",
   },
   {
-    id: 7,
+    id: 8,
     slug: "woodpecker-medicare",
     title: "Woodpecker Medicare",
     description: "Website development for Woodpecker Medicare.",
@@ -179,7 +239,7 @@ technicalApproach:
     category: "Business Website",
   },
   {
-    id: 8,
+    id: 9,
     slug: "opening-new-doors",
     title: "Opening New Doors",
     description: "Website development for Opening New Doors.",
@@ -190,7 +250,7 @@ technicalApproach:
     category: "Business Website",
   },
   {
-    id: 9,
+    id: 10,
     slug: "audiology-specialists",
     title: "Audiology Specialists",
     description: "Website development and content implementation for an audiology practice.",
@@ -201,7 +261,7 @@ technicalApproach:
     category: "Healthcare Website",
   },
   {
-    id: 10,
+    id: 11,
     slug: "southern-charm-farm",
     title: "Southern Charm Farm",
     description: "Website development for Southern Charm Farm.",
@@ -212,7 +272,7 @@ technicalApproach:
     category: "Business Website",
   },
   {
-    id: 11,
+    id: 12,
     slug: "sheer-empowerment",
     title: "Sheer Empowerment",
     description: "Website development for Sheer Empowerment.",
@@ -223,7 +283,7 @@ technicalApproach:
     category: "Business Website",
   },
   {
-    id: 12,
+    id: 13,
     slug: "vermont-country-deli",
     title: "Vermont Country Deli",
     description: "Website development and online ordering functionality for Vermont Country Deli.",
@@ -234,7 +294,7 @@ technicalApproach:
     category: "Restaurant Website",
   },
   {
-    id: 13,
+    id: 14,
     slug: "safe-medical-waste",
     title: "Safe Medical Waste",
     description: "Website development for Safe Medical Waste.",
@@ -245,7 +305,7 @@ technicalApproach:
     category: "Business Website",
   },
   {
-    id: 14,
+    id: 15,
     slug: "joe-electric",
     title: "Joe Electric",
     description: "Website development for Joe Electric.",
@@ -256,7 +316,7 @@ technicalApproach:
     category: "Business Website",
   },
   {
-    id: 15,
+    id: 16,
     slug: "whitetail",
     title: "Whitetail",
     description: "Website development for Whitetail.",
@@ -267,7 +327,7 @@ technicalApproach:
     category: "Business Website",
   },
   {
-    id: 16,
+    id: 17,
     slug: "salisbury-woods",
     title: "Salisbury Woods",
     description: "Website development for Salisbury Woods.",
@@ -278,7 +338,7 @@ technicalApproach:
     category: "Business Website",
   },
   {
-    id: 17,
+    id: 18,
     slug: "beantown-pals",
     title: "Beantown Pals",
     description: "A membership-based website featuring custom member functionality.",
@@ -289,7 +349,7 @@ technicalApproach:
     category: "Membership Website",
   },
   {
-    id: 18,
+    id: 19,
     slug: "platinum-travel",
     title: "Platinum Travel",
     description: "Website development for Platinum Travel.",
@@ -300,7 +360,7 @@ technicalApproach:
     category: "Business Website",
   },
   {
-    id: 19,
+    id: 20,
     slug: "monadnock-art",
     title: "Monadnock Art",
     description: "Website development for Monadnock Art.",
@@ -311,7 +371,7 @@ technicalApproach:
     category: "Arts & Nonprofit Website",
   },
   {
-    id: 20,
+    id: 21,
     slug: "concord-colonics",
     title: "Concord Colonics",
     description: "Website development for Concord Colonics.",
@@ -322,7 +382,7 @@ technicalApproach:
     category: "Business Website",
   },
   {
-    id: 21,
+    id: 22,
     slug: "penelope-perri",
     title: "Penelope Perri",
     description: "Website development and maintenance for Penelope Perri.",
