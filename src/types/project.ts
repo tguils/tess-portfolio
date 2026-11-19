@@ -13,4 +13,16 @@ export type Project = {
   category?: string;
   overview?: string;
 gallery?: string[];
+features?: {
+  title: string;
+  description: string;
+}[];
+
+technicalApproach?: string;
+
+challenges?: {
+  problem: string;
+  solution: string;
+}[];
+highlights?: string[];
 };

@@ -14,10 +14,16 @@ export default function ProjectGallery({
   title,
 }: ProjectGalleryProps) {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const imageButtonsRef = useRef<(HTMLButtonElement | null)[]>([]);
+  const lastTriggerRef = useRef<HTMLButtonElement | null>(null);
 
   const isOpen = selectedIndex !== null;
+
+  // Main screenshot + up to four thumbnails
+  const thumbnailCount = Math.min(images.length - 1, 4);
+  const hiddenCount = Math.max(images.length - 5, 0);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -29,7 +35,7 @@ export default function ProjectGallery({
 
     function handleKeyDown(event: KeyboardEvent) {
       if (event.key === "Escape") {
-        setSelectedIndex(null);
+        closeLightbox();
       }
 
       if (event.key === "ArrowRight") {
@@ -77,42 +83,91 @@ export default function ProjectGallery({
     };
   }, [isOpen, images.length]);
 
+  function openLightbox(index: number) {
+    lastTriggerRef.current = imageButtonsRef.current[index];
+    setSelectedIndex(index);
+  }
+
   function closeLightbox() {
-    const previousIndex = selectedIndex;
     setSelectedIndex(null);
 
-    if (previousIndex !== null) {
-      requestAnimationFrame(() => {
-        imageButtonsRef.current[previousIndex]?.focus();
-      });
-    }
+    requestAnimationFrame(() => {
+      lastTriggerRef.current?.focus();
+    });
   }
+
+  if (images.length === 0) return null;
 
   return (
     <>
-      <div className="grid gap-4 md:grid-cols-2">
-        {images.map((image, index) => (
-          <button
-            key={`${image}-${index}`}
-            ref={(element) => {
-              imageButtonsRef.current[index] = element;
-            }}
-            type="button"
-            onClick={() => setSelectedIndex(index)}
-            className="relative aspect-[16/10] overflow-hidden rounded-xl bg-gray-100"
-            aria-label={`View ${title} screenshot ${index + 1}`}
-          >
-            <Image
-              src={image}
-              alt={`${title} screenshot ${index + 1}`}
-              fill
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover object-top transition-transform duration-300 hover:scale-105"
-            />
-          </button>
-        ))}
+      <div className="space-y-3">
+        {/* Main featured screenshot */}
+        <button
+          ref={(element) => {
+            imageButtonsRef.current[0] = element;
+          }}
+          type="button"
+          onClick={() => openLightbox(0)}
+          className="group relative block aspect-[16/10] w-full overflow-hidden rounded-xl bg-gray-100 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-purple-600"
+          aria-label={`View ${title} screenshot 1`}
+        >
+          <Image
+            src={images[0]}
+            alt={`${title} screenshot 1`}
+            fill
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            className="object-cover object-top transition-transform duration-300 group-hover:scale-105"
+          />
+        </button>
+
+        {/* Thumbnail gallery */}
+        {thumbnailCount > 0 && (
+          <div className="grid grid-cols-4 gap-2">
+            {images.slice(1, 5).map((image, index) => {
+              const imageIndex = index + 1;
+              const isLastThumbnail =
+                hiddenCount > 0 && index === thumbnailCount - 1;
+
+              return (
+                <button
+                  key={`${image}-${imageIndex}`}
+                  ref={(element) => {
+                    imageButtonsRef.current[imageIndex] = element;
+                  }}
+                  type="button"
+                  onClick={() => openLightbox(imageIndex)}
+                  className="group relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-600"
+                  aria-label={
+                    isLastThumbnail
+                      ? `View ${title} screenshot ${imageIndex} and ${hiddenCount} more`
+                      : `View ${title} screenshot ${imageIndex}`
+                  }
+                >
+                  <Image
+                    src={image}
+                    alt={`${title} screenshot ${imageIndex}`}
+                    fill
+                    sizes="(max-width: 640px) 25vw, 12vw"
+                    className="object-cover object-top transition-transform duration-300 group-hover:scale-105"
+                  />
+
+                  {isLastThumbnail && (
+                    <span className="absolute inset-0 flex items-center justify-center bg-black/65 text-sm font-semibold text-white transition-colors group-hover:bg-black/75">
+                      +{hiddenCount} more
+                    </span>
+                  )}
+                </button>
+              );
+            })}
+          </div>
+        )}
+
+        <p className="text-xs text-gray-500">
+          Click an image to view the full gallery
+        </p>
       </div>
 
+      {/* Full-screen lightbox */}
       {selectedIndex !== null && (
         <div
           id="project-lightbox"

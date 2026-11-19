@@ -1,7 +1,7 @@
 
 import type { Project } from "@/types/project";
 
-export const projects = [
+export const projects: Project[] = [
   {
     id: 1,
     slug: "concours-vault",
@@ -18,27 +18,107 @@ export const projects = [
   "A custom automotive membership platform featuring personalized member profiles, vehicle management, and integrated subscription functionality.",
 
 gallery: [
+  "/projects/concours-vault-garage.jpg",
   "/projects/concours-vault.webp",
   "/projects/concours-vault-marketplace.jpg",
   "/projects/concours-vault-members.jpg",
   "/projects/concours-vault-addcar.jpg",
   "/projects/concours-vault-profile.jpg",
-  "/projects/concours-vault-garage.jpg",
 ],
+
+features: [
+  {
+    title: "Custom Vehicle Dashboard",
+    description:
+      "Developed My Garage using PHP, JavaScript, and WordPress custom post types, allowing members to view and manage their vehicle records.",
   },
   {
-    id: 2,
-    slug: "hubble-therapeutics",
-    title: "Hubble Therapeutics",
+    title: "Vehicle Submissions & File Management",
     description:
-      "A responsive website developed from Figma designs, with an emphasis on accurate visual implementation and usability.",
-    technologies: ["WordPress", "CSS", "Divi"],
-    url: "https://hubbletx.com",
-    featured: true,
-    image: "/projects/hubble-therapeutics.webp",
-    role: "Front-End Development",
-    category: "Website Development",
+      "Extended Formidable Forms with custom processing hooks to associate vehicle information, image galleries, and supporting documents with member records.",
   },
+  {
+    title: "VIN Decoder API",
+    description:
+      "Integrated a third-party VIN decoding API to retrieve vehicle specifications and automatically populate submission form fields.",
+  },
+  {
+    title: "Member Profiles & Directory Integration",
+    description:
+      "Connected GeoDirectory listings to Ultimate Member profiles using custom queries and ownership-based filtering.",
+  },
+  {
+    title: "Membership Access Automation",
+    description:
+      "Used WooCommerce hooks to automatically assign Ultimate Member roles based on completed membership purchases.",
+  },
+  {
+    title: "Appointment & Calendar Integration",
+    description:
+      "Implemented appointment displays with Google Calendar, Outlook, and downloadable ICS calendar options.",
+  },
+ 
+],
+ highlights: [
+  "Custom WordPress functionality",
+  "Third-party API integrations",
+  "Membership and access automation",
+  "User-specific dashboards and directories",
+],
+technicalApproach:
+  "Extended WordPress with custom PHP, JavaScript, post types, and plugin hooks to connect member profiles, vehicle records, and directory listings. Integrated external APIs and automated membership permissions while building responsive, user-specific interfaces.",
+
+  },
+  
+{
+  id: 2,
+  slug: "hubble-therapeutics",
+  title: "Hubble Therapeutics",
+  description:
+    "A responsive WordPress website developed from provided Figma designs, with a focus on accurate visual implementation and usability.",
+  technologies: [
+    "WordPress",
+    "Divi",
+    "CSS",
+    "Figma",
+  ],
+  url: "https://hubbletx.com",
+  featured: true,
+  image: "/projects/hubble-therapeutics.webp",
+  role: "Front-End Development",
+  category: "Website Development",
+  overview:
+    "Developed a responsive WordPress website for Hubble Therapeutics, translating provided Figma designs into functional web pages using Divi and custom CSS.",
+
+  highlights: [
+    "Figma-to-WordPress implementation",
+    "Responsive website development",
+    "Custom CSS styling",
+    "Front-end layout development",
+  ],
+
+  features: [
+    {
+      title: "Figma Design Implementation",
+      description:
+        "Translated provided Figma designs into functional WordPress pages using Divi, recreating the intended layouts, typography, spacing, and visual elements.",
+    },
+    {
+      title: "Responsive Layout Development",
+      description:
+        "Adapted page layouts for desktop, tablet, and mobile screen sizes to maintain a consistent and usable experience.",
+    },
+    {
+      title: "Custom CSS Styling",
+      description:
+        "Applied custom CSS to refine styling and layout details beyond Divi's standard design controls.",
+    },
+  ],
+
+  technicalApproach:
+    "Built the website in WordPress using Divi to structure and implement the provided Figma designs. Used CSS to refine visual details and responsive layouts, focusing on consistency between the original designs and the finished website.",
+},
+
   {
     id: 3,
     slug: "ogre-chocolates",
@@ -252,4 +332,4 @@ gallery: [
     role: "Website Development & Maintenance",
     category: "Business Website",
   },
-] satisfies Project[];
+];
